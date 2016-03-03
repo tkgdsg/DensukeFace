@@ -13,7 +13,9 @@ static char s_battery_buffer[16];
 
 static void layer_update_callback(Layer *me, GContext* ctx) {
     GRect bounds = gbitmap_get_bounds (s_bluetooth_bitmap);
-    graphics_draw_bitmap_in_rect(ctx, s_bluetooth_bitmap, (GRect) { .origin = { 126, PBL_IF_ROUND_ELSE(130,148) }, .size = bounds.size });
+    graphics_draw_bitmap_in_rect(ctx, s_bluetooth_bitmap, 
+        (GRect) { 
+          .origin = { PBL_IF_ROUND_ELSE(158,126), PBL_IF_ROUND_ELSE(90,148) }, .size = bounds.size });
 }
 
 static void update_time() {
@@ -77,7 +79,7 @@ static void main_window_load(Window *window) {
   
   // Create the TextLayer with specific bounds
   s_time_layer = text_layer_create(
-      GRect(0, PBL_IF_ROUND_ELSE(0, 0), bounds.size.w, 50));
+      GRect(0, PBL_IF_ROUND_ELSE(5, 0), bounds.size.w, 50));
 
   // Improve the layout to be more like a watchface
   text_layer_set_background_color(s_time_layer, GColorClear);
@@ -91,7 +93,7 @@ static void main_window_load(Window *window) {
   
   // Create the TextLayer with specific bounds
   s_battery_layer = text_layer_create(
-      GRect(0, PBL_IF_ROUND_ELSE(65, 60), bounds.size.w, 50));
+      GRect(PBL_IF_ROUND_ELSE(5, 1), PBL_IF_ROUND_ELSE(90, 148), 32, 50));
 
   // Improve the layout to be more like a watchface
   text_layer_set_background_color(s_battery_layer, GColorClear);
