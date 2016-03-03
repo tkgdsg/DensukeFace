@@ -1,0 +1,47 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        ""
+    ],
+    "companyName": "Nameri",
+    "enableMultiJS": false,
+    "longName": "DENSUKE",
+    "projectType": "native",
+    "resources": {
+        "media": [
+            {
+                "file": "images/bluetooth.png",
+                "name": "IMAGE_BLUETOOTH_IDENTIFIER",
+                "targetPlatforms": [
+                    "aplite",
+                    "basalt",
+                    "chalk"
+                ],
+                "type": "png"
+            },
+            {
+                "file": "images/densuke_pebble_color.png",
+                "menuIcon": true,
+                "name": "IMAGE_EXAMPLE_IDENTIFIER",
+                "targetPlatforms": [
+                    "aplite",
+                    "basalt",
+                    "chalk"
+                ],
+                "type": "png"
+            }
+        ]
+    },
+    "sdkVersion": "3",
+    "shortName": "DENSUKE",
+    "targetPlatforms": [
+        "aplite",
+        "basalt",
+        "chalk"
+    ],
+    "uuid": "5b08977f-14e8-4db5-a211-8c2d9b9b2bcf",
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": true
+    }
+}
